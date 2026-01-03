@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functies & Features | GameCraft SuperBot</title>
+    <title>Specificaties | GameCraft SuperBot</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
@@ -11,90 +11,45 @@
         body { background-color: #f4f7f9; font-family: 'Segoe UI', sans-serif; }
         .navbar { background-color: var(--gc-dark); border-bottom: 2px solid var(--gc-blue); }
         .feature-card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .badge-tech { background-color: var(--gc-blue); color: white; font-size: 0.8rem; }
-        .table thead { background-color: var(--gc-dark); color: white; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-dark p-3">
+<nav class="navbar navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-arrow-left me-2"></i>TERUG NAAR HOME</a>
+        <a href="index.html" class="btn btn-outline-light btn-sm fw-bold"><i class="bi bi-chevron-left"></i> Terug</a>
+        <span class="navbar-brand fw-bold ms-3">SYSTEEM DETAILS</span>
     </div>
 </nav>
 
 <div class="container my-5">
-    <h1 class="fw-bold mb-4">Technische Specificaties & Functies</h1>
+    <h1 class="fw-bold mb-4">Systeem Features</h1>
     
     <div class="feature-card">
-        <h3 class="fw-bold text-primary mb-3">Core Systeem Features</h3>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>Beschrijving</th>
-                    <th>Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Live Status Ticker</strong></td>
-                    <td>Real-time Minecraft server status in Discord activiteit.</td>
-                    <td><span class="badge badge-tech">Integratie</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Canvas Welcoming</strong></td>
-                    <td>Dynamische afbeeldingen met avatar-render bij nieuwe leden.</td>
-                    <td><span class="badge badge-tech">Automatisering</span></td>
-                </tr>
-                <tr>
-                    <td><strong>XP-Leveling</strong></td>
-                    <td>Activiteitsmeting met data-opslag in JSON database.</td>
-                    <td><span class="badge badge-tech">Gamificatie</span></td>
-                </tr>
-                <tr>
-                    <td><strong>AutoMod v2</strong></td>
-                    <td>RegEx-gebaseerd filter met strike-systeem en timeouts.</td>
-                    <td><span class="badge badge-tech">Beveiliging</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Host Monitoring</strong></td>
-                    <td>Live iMac RAM en Uptime tracking via <code>/stats</code>.</td>
-                    <td><span class="badge badge-tech">Systeem</span></td>
-                </tr>
-            </tbody>
-        </table>
+        <h3 class="fw-bold text-primary mb-3"><i class="bi bi-cpu me-2"></i>Hosting & Core</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Host:</strong> Dedicated Apple iMac</li>
+            <li class="list-group-item"><strong>Runtime:</strong> Node.js v18 LTS</li>
+            <li class="list-group-item"><strong>Database:</strong> Local JSON Persistence (XP & Config)</li>
+        </ul>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            <div class="feature-card">
-                <h4><i class="bi bi-shield-check text-success me-2"></i>Veiligheid</h4>
-                <ul>
-                    <li>Anti-Caps Lock (70% threshold)</li>
-                    <li>3-Strike Auto-Timeout systeem</li>
-                    <li>Lokaal beheerde <code>badwords.txt</code></li>
-                    <li>Moderatie Log-kanaal output</li>
-                </ul>
+            <div class="feature-card h-100">
+                <h4 class="fw-bold text-success"><i class="bi bi-shield-check me-2"></i>Veiligheid</h4>
+                <p>Het AutoMod systeem scant berichten op verboden woorden uit <code>badwords.txt</code> en straft herhaaldelijke overtredingen automatisch met timeouts.</p>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="feature-card">
-                <h4><i class="bi bi-cpu text-warning me-2"></i>Techniek</h4>
-                <ul>
-                    <li>Node.js v18+ Architectuur</li>
-                    <li>Local JSON Persistence</li>
-                    <li>Slash Command Integration</li>
-                    <li>Dedicated iMac Hosting</li>
-                </ul>
+            <div class="feature-card h-100">
+                <h4 class="fw-bold text-info"><i class="bi bi-image me-2"></i>Dynamic Canvas</h4>
+                <p>Nieuwe leden ontvangen een gepersonaliseerde welkomstkaart die "on-the-fly" wordt gerenderd met hun eigen profielfoto.</p>
             </div>
         </div>
     </div>
 </div>
 
-<footer class="text-center py-4 text-muted border-top">
-    &copy; 2026 GameCraft SuperBot Systeemoverzicht
-</footer>
-
+<footer class="text-center py-4 text-muted border-top">Systeemoverzicht &copy; 2026</footer>
 </body>
 </html>

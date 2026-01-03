@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commando's | GameCraft SuperBot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        :root { --gc-blue: #00AAFF; --gc-dark: #0B1622; }
+        body { background-color: #f4f7f9; font-family: 'Segoe UI', sans-serif; }
+        .navbar { background-color: var(--gc-dark); border-bottom: 2px solid var(--gc-blue); }
+        .command-card { background: white; border-left: 5px solid var(--gc-blue); border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s; }
+        .command-card:hover { transform: scale(1.01); }
+        code { color: var(--gc-blue); font-size: 1.1rem; font-weight: bold; }
+        .category-header { border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; color: var(--gc-dark); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark sticky-top">
+    <div class="container">
+        <a href="index.html" class="btn btn-outline-light btn-sm fw-bold"><i class="bi bi-chevron-left"></i> Terug</a>
+        <span class="navbar-brand fw-bold ms-3">BOT COMMANDO'S</span>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <h1 class="fw-bold"><i class="bi bi-terminal me-2"></i>Commando Overzicht</h1>
+    <p class="text-muted">Een volledige lijst van alle functies beschikbaar in de Discord server.</p>
+
+    <h3 class="category-header">👤 Speler Commando's</h3>
+    <div class="command-card p-3"><code>/rank</code> - Bekijk je huidige XP, level en voortgang.</div>
+    <div class="command-card p-3"><code>/top</code> - Toont de ranglijst van de top 10 meest actieve spelers.</div>
+    <div class="command-card p-3"><code>/mcstatus</code> - Vraag de live-status en spelerlijst op van de Minecraft server.</div>
+    <div class="command-card p-3"><code>/stats</code> - Technische informatie over de host-snelheid en bot-uptime.</div>
+
+    <h3 class="category-header">🛡️ Moderatie</h3>
+    <div class="command-card p-3" style="border-left-color: #e67e22;"><code>/clear [aantal]</code> - Verwijder snel berichten uit een kanaal.</div>
+    <div class="command-card p-3" style="border-left-color: #e67e22;"><code>/unmute [gebruiker]</code> - Hef een actieve timeout handmatig op.</div>
+    <div class="command-card p-3" style="border-left-color: #e67e22;"><code>/clear-strikes [gebruiker]</code> - Reset alle AutoMod waarschuwingen.</div>
+
+    <h3 class="category-header">⚙️ Admin & Systeem</h3>
+    <div class="command-card p-3" style="border-left-color: #c0392b;"><code>/set-server [ip] [poort]</code> - Configureer de Minecraft server koppeling.</div>
+    <div class="command-card p-3" style="border-left-color: #c0392b;"><code>/set-docs [url]</code> - Pas de link naar deze website aan in de bot.</div>
+    <div class="command-card p-3" style="border-left-color: #c0392b;"><code>/set-xp [gebruiker] [aantal]</code> - Pas handmatig XP waarden aan.</div>
+    <div class="command-card p-3" style="border-left-color: #c0392b;"><code>/setup-verify</code> - Plaats het verificatie-bericht in een kanaal.</div>
+</div>
+
+<footer class="text-center py-4 text-muted">GameCraft SuperBot Wiki</footer>
+</body>
+</html>

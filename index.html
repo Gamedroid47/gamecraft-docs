@@ -3,170 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameCraft SuperBot | Officiële Wiki</title>
+    <title>GameCraft SuperBot | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         :root { --gc-blue: #00AAFF; --gc-dark: #0B1622; }
-        body { background-color: #f4f7f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
-        /* Navigatie */
+        body { background-color: #f4f7f9; font-family: 'Segoe UI', sans-serif; }
         .navbar { background-color: var(--gc-dark); border-bottom: 2px solid var(--gc-blue); }
-        
-        /* Blokken en Kaarten */
+        .hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('BG_GCSB.png'); background-size: cover; background-position: center; min-height: 350px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
         .section-box { background: white; border-radius: 15px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .command-card { background: #fff; border-radius: 10px; border-left: 5px solid var(--gc-blue); height: 100%; transition: 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .command-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        
-        /* Footer styling */
-        .footer { background: var(--gc-dark); color: #888; padding: 60px 0 30px 0; }
-        .footer h6 { color: white; margin-bottom: 20px; }
-        .footer a { color: var(--gc-blue); text-decoration: none; }
-        .disclaimer-text { font-size: 0.75rem; color: #555; margin-top: 30px; border-top: 1px solid #222; padding-top: 20px; text-align: center; }
-        
-        code { color: var(--gc-blue); background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .nav-card { border: none; border-radius: 12px; transition: 0.3s; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .nav-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border: 1px solid var(--gc-blue); }
+        .footer { background: var(--gc-dark); color: #888; padding: 40px 0; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-dark sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#"><i class="bi bi-robot me-2"></i>GAMECRAFT BOT</a>
-        <a href="https://discord.gg/8aPKC4bU" target="_blank" class="btn btn-primary btn-sm px-4 fw-bold" style="background-color: var(--gc-blue); border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">Join Discord</a>
+        <a href="https://discord.gg/8aPKC4bU" target="_blank" class="btn btn-primary btn-sm px-4 fw-bold" style="background-color: var(--gc-blue); border: none;">Join Discord</a>
     </div>
 </nav>
 
-<header class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('BG_GCSB.png'); background-size: cover; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-    <div class="container text-white text-center">
-        <h1 class="display-3 fw-bold text-uppercase" style="color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">GameCraft SuperBot</h1>
-        <p class="lead fs-4" style="color: #ffffff !important; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">Alles wat je moet weten over de GameCraft SuperBot commando's en systemen.</p>
+<header class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-uppercase">GameCraft SuperBot</h1>
+        <p class="lead">Het centrale punt voor bot-informatie en commando's.</p>
     </div>
 </header>
 
 <main class="container my-5">
-
-    <section class="section-box">
-        <h2 class="fw-bold mb-3">Over de Bot</h2>
-        <p>De GameCraft SuperBot is de spil van onze community, gehost op een dedicated iMac voor optimale snelheid. Met functies zoals een real-time status-checker, een uitgebreid levelsysteem en geautomatiseerde moderatie, zorgt de bot voor een veilige en actieve omgeving voor alle spelers.</p>
-        <div class="mt-4">
-            <a href="func-feat.html" class="btn btn-outline-primary fw-bold px-4">
-                <i class="bi bi-list-check me-2"></i>Bekijk alle Systeemfuncties
+    <div class="row text-center g-4">
+        <div class="col-md-6">
+            <a href="commands.html" class="text-decoration-none text-dark">
+                <div class="card nav-card p-5 h-100">
+                    <i class="bi bi-terminal-fill display-4 text-primary mb-3"></i>
+                    <h3 class="fw-bold">Commando's</h3>
+                    <p class="text-muted">Bekijk de volledige lijst met speler, admin en moderatie functies.</p>
+                    <span class="btn btn-outline-primary mt-auto fw-bold">Open Lijst</span>
+                </div>
             </a>
         </div>
-    </section>
-
-    <section class="mb-5">
-        <h2 class="fw-bold mb-4"><i class="bi bi-terminal me-2 text-primary"></i>Alle Commando's</h2>
-        
-        <h5 class="mb-3 mt-4 text-muted text-uppercase small fw-bold">Speler Commando's</h5>
-        <div class="row g-4 mb-4">
-            <div class="col-md-4"><div class="card command-card p-4"><h5><code>/rank</code></h5><p class="small m-0 text-muted">Bekijk je huidige XP, level en voortgangsbalk.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4"><h5><code>/top</code></h5><p class="small m-0 text-muted">Toont de ranglijst van de top 10 meest actieve spelers.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4"><h5><code>/mcstatus</code></h5><p class="small m-0 text-muted">Vraag de live-status en spelerlijst op van de Minecraft server.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4"><h5><code>/help</code></h5><p class="small m-0 text-muted">Opent het help-menu en de link naar deze website in Discord.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4"><h5><code>/stats</code></h5><p class="small m-0 text-muted">Technische informatie over de host-snelheid en bot-uptime.</p></div></div>
-        </div>
-
-        <h5 class="mb-3 mt-4 text-muted text-uppercase small fw-bold">Moderatie & Beheer</h5>
-        <div class="row g-4">
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #e67e22;"><h5><code>/clear</code></h5><p class="small m-0 text-muted">Verwijder snel een aantal berichten uit een kanaal.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #e67e22;"><h5><code>/unmute</code></h5><p class="small m-0 text-muted">Hef een actieve timeout van een lid handmatig op.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #e67e22;"><h5><code>/clear-strikes</code></h5><p class="small m-0 text-muted">Reset alle AutoMod waarschuwingen van een gebruiker.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #c0392b;"><h5><code>/set-server</code></h5><p class="small m-0 text-muted">Configureer het IP en de poort van de Minecraft server.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #c0392b;"><h5><code>/set-xp</code></h5><p class="small m-0 text-muted">Pas handmatig de XP-waarde van een lid aan.</p></div></div>
-            <div class="col-md-4"><div class="card command-card p-4" style="border-left-color: #c0392b;"><h5><code>/rollen</code></h5><p class="small m-0 text-muted">Geeft een overzicht van alle serverrollen en ID's.</p></div></div>
-        </div>
-    </section>
-
-    <div class="row mb-5">
         <div class="col-md-6">
-            <div class="section-box h-100">
-                <h3 class="fw-bold mb-3"><i class="bi bi-graph-up-arrow me-2 text-success"></i>XP-leveling</h3>
-                <p>Verdien XP door actief te zijn in onze tekstkanalen. Ons systeem houdt je voortgang bij en kent automatisch rollen toe.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="section-box h-100">
-                <h3 class="fw-bold mb-3"><i class="bi bi-shield-lock-fill me-2 text-danger"></i>AutoMod</h3>
-                <p>Ons AutoMod-systeem scant op verboden woorden en spam. Bij 3 strikes krijg je automatisch een timeout.</p>
-            </div>
+            <a href="func-feat.html" class="text-decoration-none text-dark">
+                <div class="card nav-card p-5 h-100">
+                    <i class="bi bi-cpu-fill display-4 text-primary mb-3"></i>
+                    <h3 class="fw-bold">Specificaties</h3>
+                    <p class="text-muted">Technische details over de hosting op iMac en het AutoMod systeem.</p>
+                    <span class="btn btn-outline-primary mt-auto fw-bold">Bekijk Techniek</span>
+                </div>
+            </a>
         </div>
     </div>
 
-    <section class="section-box" id="contact">
+    <section class="section-box mt-5" id="contact">
         <h2 class="fw-bold mb-4"><i class="bi bi-envelope-at me-2 text-primary"></i>Contact Opnemen</h2>
-        <form id="my-form" action="https://formspree.io/f/mvzgwond" method="POST">
+        <form action="https://formspree.io/f/mvzgwond" method="POST">
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label class="form-label fw-bold">Jouw Email:</label>
-                    <input type="email" name="email" class="form-control" placeholder="naam@voorbeeld.com" required />
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="form-label fw-bold">Onderwerp:</label>
-                    <input type="text" name="subject" class="form-control" placeholder="Bijv. Vraag over de bot" />
-                </div>
+                <div class="col-md-6 mb-3"><input type="email" name="email" class="form-control" placeholder="Jouw Email" required /></div>
+                <div class="col-md-6 mb-3"><input type="text" name="subject" class="form-control" placeholder="Onderwerp" /></div>
             </div>
-            <div class="mb-3">
-                <label class="form-label fw-bold">Bericht:</label>
-                <textarea name="message" class="form-control" rows="5" placeholder="Typ hier je bericht..." required></textarea>
-            </div>
-            <button id="my-form-button" class="btn btn-primary px-5 fw-bold" style="background-color: var(--gc-blue); border: none;">Versturen</button>
-            <p id="my-form-status" class="mt-3"></p>
+            <textarea name="message" class="form-control mb-3" rows="4" placeholder="Typ hier je bericht..." required></textarea>
+            <button type="submit" class="btn btn-primary px-5 fw-bold" style="background-color: var(--gc-blue); border: none;">Versturen</button>
         </form>
     </section>
-
 </main>
 
-<footer class="footer">
+<footer class="footer text-center">
     <div class="container">
-        <div class="row text-center text-md-start">
-            <div class="col-md-4 mb-4">
-                <h6>Eigenaar</h6>
-                <p class="m-0 text-white">Gamedroid47</p>
-            </div>
-            <div class="col-md-4 mb-4 text-center">
-                <h6>Contactgegevens</h6>
-                <p class="m-0"><a href="mailto:shubers79@gmail.com">shubers79@gmail.com</a></p>
-            </div>
-            <div class="col-md-4 mb-4 text-md-end">
-                <h6>Copyright</h6>
-                <p class="m-0 text-white">&copy; 2026 S.G.A. Hubers</p>
-            </div>
-        </div>
-        <div class="disclaimer-text">
-            DISCLAIMER: Made with the help of Google™ Gemini™
-        </div>
+        <p class="m-0 text-white">&copy; 2026 S.G.A. Hubers | Eigenaar: Gamedroid47</p>
+        <small class="text-muted">Made with the help of Google™ Gemini™</small>
     </div>
 </footer>
 
-<script>
-  var form = document.getElementById("my-form");
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    status.innerHTML = "Bericht wordt verzonden...";
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        status.style.color = "green";
-        status.innerHTML = "Bedankt! Je bericht is succesvol verzonden.";
-        form.reset();
-      } else {
-        status.style.color = "red";
-        status.innerHTML = "Oeps! Er was een probleem bij het verzenden.";
-      }
-    }).catch(error => {
-      status.style.color = "red";
-      status.innerHTML = "Oeps! Er is iets misgegaan met de verbinding.";
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
