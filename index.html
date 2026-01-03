@@ -3,133 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameCraft SuperBot | Handleiding & Info</title>
+    <title>GameCraft SuperBot | Officiële Handleiding</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-        :root { --hc-blue: #00AAFF; --hc-dark: #0B1622; }
-        body { background-color: #f4f7f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: var(--hc-dark); }
-        .hero { background: linear-gradient(rgba(11, 22, 34, 0.9), rgba(11, 22, 34, 0.9)), url('https://via.placeholder.com/1920x600'); background-size: cover; color: white; padding: 100px 0; text-align: center; }
-        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .feature-icon { font-size: 2.5rem; color: var(--hc-blue); margin-bottom: 15px; }
-        .command-table { background: white; border-radius: 15px; overflow: hidden; }
-        footer { background: var(--hc-dark); color: white; padding: 40px 0; margin-top: 50px; }
+        :root { --gc-blue: #00AAFF; --gc-dark: #0B1622; --gc-accent: #FFD700; }
+        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; color: #333; }
+        .navbar { background-color: var(--gc-dark); border-bottom: 3px solid var(--gc-blue); }
+        .hero { background: linear-gradient(rgba(11, 22, 34, 0.8), rgba(11, 22, 34, 0.9)), url('https://images.unsplash.com/photo-1587573089734-09cb99c7f06d?auto=format&fit=crop&q=80&w=1600'); background-size: cover; color: white; padding: 80px 0; text-align: center; }
+        .section-title { border-bottom: 3px solid var(--gc-blue); display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
+        .command-card { background: white; border-radius: 12px; border-left: 5px solid var(--gc-blue); transition: 0.3s; height: 100%; }
+        .command-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .badge-mod { background-color: #e67e22; }
+        .badge-admin { background-color: #c0392b; }
+        .badge-user { background-color: #27ae60; }
+        code { color: var(--gc-blue); font-weight: bold; background: #eee; padding: 2px 5px; border-radius: 4px; }
+        .footer { background: var(--gc-dark); color: white; padding: 30px 0; }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">GAMECRAFT BOT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#functies">Functies</a></li>
-                <li class="nav-item"><a class="nav-link" href="#commands">Commando's</a></li>
-                <li class="nav-item"><a class="nav-link" href="#handleidingen">Handleidingen</a></li>
-            </ul>
+        <a class="navbar-brand fw-bold" href="#"><i class="bi bi-robot me-2"></i>GAMECRAFT BOT</a>
+        <div class="ms-auto">
+            <a href="https://discord.com" class="btn btn-outline-light btn-sm">Join Discord</a>
         </div>
     </div>
 </nav>
 
 <header class="hero">
     <div class="container">
-        <h1 class="display-4 fw-bold">GameCraft SuperBot</h1>
-        <p class="lead">De ultieme metgezel voor onze Minecraft community.</p>
-        <a href="#handleidingen" class="btn btn-primary btn-lg mt-3" style="background-color: var(--hc-blue); border: none;">Bekijk Handleidingen</a>
+        <h1 class="display-4 fw-bold">Documentatie & Manual</h1>
+        <p class="lead">Alles wat je moet weten over de GameCraft SuperBot commando's en systemen.</p>
     </div>
 </header>
 
 <main class="container my-5">
-    
-    <section id="functies" class="mb-5 text-center">
-        <h2 class="fw-bold mb-4">Waarom de SuperBot?</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="feature-icon">🛡️</div>
-                    <h4>AutoMod</h4>
-                    <p>Houdt de server veilig met een strike-systeem en automatische timeouts.</p>
+
+    <section id="manual">
+        <h2 class="fw-bold section-title">📖 Volledige Commando Lijst</h2>
+        
+        <h3 class="mb-4 mt-2"><i class="bi bi-person-circle me-2 text-success"></i>Voor Iedereen</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card command-card p-3">
+                    <h5><code>/rank</code> <span class="badge badge-user float-end" style="font-size: 0.6em;">Lid</span></h5>
+                    <p class="small text-muted">Toont je huidige level, XP en voortgangsbalk. Handig om te zien hoe ver je bent van je volgende level-up.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="feature-icon">📈</div>
-                    <h4>Leveling</h4>
-                    <p>Verdien XP door te chatten en stijg in de ranglijsten van de community.</p>
+            <div class="col-md-4">
+                <div class="card command-card p-3">
+                    <h5><code>/top</code> <span class="badge badge-user float-end" style="font-size: 0.6em;">Lid</span></h5>
+                    <p class="small text-muted">Bekijk de Top 10 meest actieve leden van de server. Wie staat er momenteel op nummer 1?</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100">
-                    <div class="feature-icon">🎮</div>
-                    <h4>MC Status</h4>
-                    <p>Direct inzicht in wie er online zijn op de Minecraft server.</p>
+            <div class="col-md-4">
+                <div class="card command-card p-3">
+                    <h5><code>/mcstatus</code> <span class="badge badge-user float-end" style="font-size: 0.6em;">Lid</span></h5>
+                    <p class="small text-muted">Vraagt de live status op van de Minecraft server. Toont of de server online is, het IP en wie er spelen.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card command-card p-3">
+                    <h5><code>/help</code> <span class="badge badge-user float-end" style="font-size: 0.6em;">Lid</span></h5>
+                    <p class="small text-muted">Opent het menu dat je nu voor je ziet in Discord, met een directe link naar deze website.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card command-card p-3">
+                    <h5><code>/stats</code> <span class="badge badge-user float-end" style="font-size: 0.6em;">Lid</span></h5>
+                    <p class="small text-muted">Toont technische info over de iMac host, zoals uptime en geheugengebruik van de bot.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mb-4"><i class="bi bi-shield-lock me-2 text-warning"></i>Moderatie Tools</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-warning">
+                    <h5><code>/clear [aantal]</code> <span class="badge badge-mod float-end" style="font-size: 0.6em;">Moderator</span></h5>
+                    <p class="small text-muted">Verwijdert razendsnel een specifiek aantal berichten (max 100) uit een kanaal. Ideaal bij spam.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-warning">
+                    <h5><code>/unmute [gebruiker]</code> <span class="badge badge-mod float-end" style="font-size: 0.6em;">Moderator</span></h5>
+                    <p class="small text-muted">Heft een actieve timeout van een gebruiker op. Gebruik dit als iemand per ongeluk gestraft is.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-warning">
+                    <h5><code>/clear-strikes [gebruiker]</code> <span class="badge badge-mod float-end" style="font-size: 0.6em;">Moderator</span></h5>
+                    <p class="small text-muted">Zet de AutoMod waarschuwingen (strikes) van een gebruiker terug naar 0. Voorkomt een onterechte timeout.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mb-4"><i class="bi bi-gear-fill me-2 text-danger"></i>Beheer & Config</h3>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-danger">
+                    <h5><code>/set-server [ip] [poort]</code> <span class="badge badge-admin float-end" style="font-size: 0.6em;">Admin</span></h5>
+                    <p class="small text-muted">Configureert het IP-adres van de Minecraft server die de bot moet tracken voor status-updates.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-danger">
+                    <h5><code>/set-xp [gebruiker] [aantal]</code> <span class="badge badge-admin float-end" style="font-size: 0.6em;">Admin</span></h5>
+                    <p class="small text-muted">Past handmatig de XP van een speler aan. Handig voor het uitdelen van bonus-XP na events.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card command-card p-3 border-danger">
+                    <h5><code>/rollen</code> <span class="badge badge-admin float-end" style="font-size: 0.6em;">Admin</span></h5>
+                    <p class="small text-muted">Geeft een lijst van alle Discord rollen en hun unieke ID's voor gebruik in de configuratiebestanden.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="commands" class="mb-5">
-        <h2 class="fw-bold mb-4">Beschikbare Commando's</h2>
-        <div class="table-responsive command-table shadow-sm">
-            <table class="table table-hover m-0">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Commando</th>
-                        <th>Beschrijving</th>
-                        <th>Permissie</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><code>/rank</code></td><td>Bekijk je huidige level en XP status.</td><td>Leden</td></tr>
-                    <tr><td><code>/mcstatus</code></td><td>Live status van de Minecraft server.</td><td>Leden</td></tr>
-                    <tr><td><code>/top</code></td><td>Bekijk de top 10 spelers.</td><td>Leden</td></tr>
-                    <tr><td><code>/clear</code></td><td>Wis een aantal berichten in een kanaal.</td><td>Moderator</td></tr>
-                    <tr><td><code>/unmute</code></td><td>Heft een actieve timeout op.</td><td>Moderator</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <hr class="my-5">
 
-    <section id="handleidingen" class="mb-5">
-        <h2 class="fw-bold mb-4">Handleidingen</h2>
-        <div class="accordion" id="guideAccordion">
-            <div class="accordion-item shadow-sm mb-2 border-0">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#guide1">
-                        Hoe werkt het Strike-systeem?
-                    </button>
-                </h2>
-                <div id="guide1" class="accordion-collapse collapse show" data-bs-parent="#guideAccordion">
-                    <div class="accordion-body">
-                        Als je een verboden woord typt, krijg je een waarschuwing (strike). Bij <strong>3 strikes binnen een uur</strong> krijg je automatisch een timeout van 10 minuten. Strikes vervallen na verloop van tijd automatisch.
-                    </div>
-                </div>
+    <section class="bg-light p-4 rounded shadow-sm">
+        <h2 class="fw-bold"><i class="bi bi-info-circle me-2"></i>Systeeminformatie</h2>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h5>AutoMod Strike Systeem</h5>
+                <ul>
+                    <li>1x Schelden = Waarschuwing (bericht verwijderd).</li>
+                    <li>2x Schelden = Laatste waarschuwing.</li>
+                    <li><strong>3x Schelden = 10 minuten Timeout.</strong></li>
+                </ul>
+                <p><small>Strikes vervallen automatisch na 60 minuten inactiviteit.</small></p>
             </div>
-            <div class="accordion-item shadow-sm mb-2 border-0">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guide2">
-                        Hoe kan ik mijn Minecraft account koppelen?
-                    </button>
-                </h2>
-                <div id="guide2" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
-                    <div class="accordion-body">
-                        Onze bot werkt samen met <strong>DiscordSRV</strong>. Gebruik het commando in Minecraft om je account te linken aan Discord. Je verdient dan extra XP voor je activiteit in-game!
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h5>Leveling Systeem</h5>
+                <p>Je verdient tussen de 5 en 15 XP per bericht. Er geldt een kleine "cooldown" om spammen voor XP te voorkomen. Je kunt je voortgang altijd checken met <code>/rank</code>.</p>
             </div>
         </div>
     </section>
 
 </main>
 
-<footer>
+<footer class="footer">
     <div class="container text-center">
-        <p class="mb-0">&copy; 2026 GameCraft Community. Alle rechten voorbehouden.</p>
-        <small class="text-muted">Powered by GameCraft SuperBot v1.0</small>
+        <p class="mb-1">&copy; 2026 GameCraft Community | Gebouwd door shubers79</p>
+        <div class="mt-2">
+            <a href="#" class="text-white-50 me-3 text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-white-50 text-decoration-none">Server Regels</a>
+        </div>
     </div>
 </footer>
 
