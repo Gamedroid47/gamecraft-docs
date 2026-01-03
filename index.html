@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameCraft SuperBot | Handleiding & Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --hc-blue: #00AAFF; --hc-dark: #0B1622; }
+        body { background-color: #f4f7f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background-color: var(--hc-dark); }
+        .hero { background: linear-gradient(rgba(11, 22, 34, 0.9), rgba(11, 22, 34, 0.9)), url('https://via.placeholder.com/1920x600'); background-size: cover; color: white; padding: 100px 0; text-align: center; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .feature-icon { font-size: 2.5rem; color: var(--hc-blue); margin-bottom: 15px; }
+        .command-table { background: white; border-radius: 15px; overflow: hidden; }
+        footer { background: var(--hc-dark); color: white; padding: 40px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">GAMECRAFT BOT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#functies">Functies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#commands">Commando's</a></li>
+                <li class="nav-item"><a class="nav-link" href="#handleidingen">Handleidingen</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">GameCraft SuperBot</h1>
+        <p class="lead">De ultieme metgezel voor onze Minecraft community.</p>
+        <a href="#handleidingen" class="btn btn-primary btn-lg mt-3" style="background-color: var(--hc-blue); border: none;">Bekijk Handleidingen</a>
+    </div>
+</header>
+
+<main class="container my-5">
+    
+    <section id="functies" class="mb-5 text-center">
+        <h2 class="fw-bold mb-4">Waarom de SuperBot?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>AutoMod</h4>
+                    <p>Houdt de server veilig met een strike-systeem en automatische timeouts.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="feature-icon">📈</div>
+                    <h4>Leveling</h4>
+                    <p>Verdien XP door te chatten en stijg in de ranglijsten van de community.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="feature-icon">🎮</div>
+                    <h4>MC Status</h4>
+                    <p>Direct inzicht in wie er online zijn op de Minecraft server.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="mb-5">
+        <h2 class="fw-bold mb-4">Beschikbare Commando's</h2>
+        <div class="table-responsive command-table shadow-sm">
+            <table class="table table-hover m-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Commando</th>
+                        <th>Beschrijving</th>
+                        <th>Permissie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>/rank</code></td><td>Bekijk je huidige level en XP status.</td><td>Leden</td></tr>
+                    <tr><td><code>/mcstatus</code></td><td>Live status van de Minecraft server.</td><td>Leden</td></tr>
+                    <tr><td><code>/top</code></td><td>Bekijk de top 10 spelers.</td><td>Leden</td></tr>
+                    <tr><td><code>/clear</code></td><td>Wis een aantal berichten in een kanaal.</td><td>Moderator</td></tr>
+                    <tr><td><code>/unmute</code></td><td>Heft een actieve timeout op.</td><td>Moderator</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="handleidingen" class="mb-5">
+        <h2 class="fw-bold mb-4">Handleidingen</h2>
+        <div class="accordion" id="guideAccordion">
+            <div class="accordion-item shadow-sm mb-2 border-0">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#guide1">
+                        Hoe werkt het Strike-systeem?
+                    </button>
+                </h2>
+                <div id="guide1" class="accordion-collapse collapse show" data-bs-parent="#guideAccordion">
+                    <div class="accordion-body">
+                        Als je een verboden woord typt, krijg je een waarschuwing (strike). Bij <strong>3 strikes binnen een uur</strong> krijg je automatisch een timeout van 10 minuten. Strikes vervallen na verloop van tijd automatisch.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow-sm mb-2 border-0">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guide2">
+                        Hoe kan ik mijn Minecraft account koppelen?
+                    </button>
+                </h2>
+                <div id="guide2" class="accordion-collapse collapse" data-bs-parent="#guideAccordion">
+                    <div class="accordion-body">
+                        Onze bot werkt samen met <strong>DiscordSRV</strong>. Gebruik het commando in Minecraft om je account te linken aan Discord. Je verdient dan extra XP voor je activiteit in-game!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2026 GameCraft Community. Alle rechten voorbehouden.</p>
+        <small class="text-muted">Powered by GameCraft SuperBot v1.0</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
